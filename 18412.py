@@ -1,0 +1,14 @@
+n, a, b = map(int, input().split())
+s = input()
+i = 0
+while i <= a - 2:
+    print(s[i], end="")
+    i += 1
+i = b - 1
+while i >= a - 1:
+    print(s[i], end="")
+    i -= 1
+i = b
+while i <= n - 1:
+    print(s[i], end = "")
+    i += 1
