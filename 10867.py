@@ -1,0 +1,5 @@
+a = int(input())
+b = set(map(int, input().split()))
+b = list(b)
+b.sort()
+print(" ".join(map(str, b)))
