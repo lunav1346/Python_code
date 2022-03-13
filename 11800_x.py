@@ -1,16 +1,23 @@
-def main():
-    alias = { 1 : 'Yakk', 2 : 'Doh', 3 : 'Seh', 4 : 'Ghar', 5 : "Bang", 6 : "Sheesh" }
-    alias_same = { 1: "Habb Yakk", 2 : "Dobara", 3 : "Dousa", 4 : "Dorgy", 5 : "Dabash", 6 : "Dosh" }
+n = int(input())
+name = [0, "Yakk", "Doh", "Seh", "Ghar", "Bang", "Sheesh"]
 
-    for i in range(1, int(input()) + 1):
-        a, b = sorted(map(int, input().split()), reverse=True)
-
-        if a == b:
-            print(f'Case {i}: {alias_same[a]}')
-        elif (a == 5 and b == 6) or (a == 6 and b == 5):
-            print(f'Case {i}: Sheesh Beesh')
-        else:
-            print(f'Case {i}: {alias[a]} {alias[b]}')
-
-if __name__ == '__main__':
-    main()
+for i in range(n):
+    l = list(map(int, input().split()))
+    l.sort(reverse=True)
+    print("Case %d: " %(i+1), end="")
+    if l[0] == l[1] == 1:
+        print("Habb Yakk")
+    elif l[0] == l[1] == 2:
+        print("Dobara")
+    elif l[0] == l[1] == 3:
+        print("Dousa")
+    elif l[0] == l[1] == 4:
+        print("Dorgy")
+    elif l[0] == l[1] == 5:
+        print("Dabash")
+    elif l[0] == l[1] == 6:
+        print("Dosh")
+    elif l[0] == 6 and l[1] == 5:
+        print("Sheesh Beesh")
+    else:
+        print(name[l[0]], name[l[1]])
