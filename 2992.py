@@ -1,19 +1,13 @@
-a = int(input())
-sor_a = list(str(a))
-sor_a.sort()
-#작은거에서 큰 순서대로 나열
+import itertools
 
-sor_a.insert(0, sor_a[-1])
-#0번자리에 -1번(맨 마지막꺼를 정렬)
+a = list(input())
 
-del sor_a[-1]
-#-1번(맨 마지막꺼)를 없앰
+arr_a = list(itertools.permutations(a, len(a)))
+arr_a.sort(reverse=True)
 
-b = "".join(sor_a)
-b = int(b)
-#97251이였다면 91257을 출력
+result = []
+for i in arr_a: # arr에서 값을 가져오기
+    result.append("".join(i)) # 튜플을 문자열로 합침
 
-if a >= b:
-    print(0)
-else:
-    print(b)
+idx = result.index("".join(a)) # 숫자가 있는 인덱스 번호를 찾기
+print(result[idx-1] if idx != 0 else 0) # 제일 큰 수가 아니라면 현재보다 바로 큰 값을 출력하고 0을 출력한다.
