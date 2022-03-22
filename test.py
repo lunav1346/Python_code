@@ -1,12 +1,15 @@
-from itertools import combinations
+import weather
+import math
 
-a = input()
-b = []
+def convert(TheStream):
+    global temp, celcius, Cstream
+    for temp in TheStream:
+        celcius = rount((temp - 32) / 1.8)
+        Cstream.append(celcius)
 
-list_a = list(str(a))
+Cstream = []
+Fstream = weather.get_forecasts('Blacksburg, VA')
 
-for i in combinations(list_a, int(a)):
-
-    b.append("".join(i))
-
-print(b)
+print(Fstream)
+convert(Fstream)
+print(Cstram)
