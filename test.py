@@ -1,15 +1,4 @@
-import weather
-import math
+n=int(input())
 
-def convert(TheStream):
-    global temp, celcius, Cstream
-    for temp in TheStream:
-        celcius = rount((temp - 32) / 1.8)
-        Cstream.append(celcius)
-
-Cstream = []
-Fstream = weather.get_forecasts('Blacksburg, VA')
-
-print(Fstream)
-convert(Fstream)
-print(Cstram)
+for i in range(1,n+1):
+    print('{:>n}'.format("*", i))
