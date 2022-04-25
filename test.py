@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #4
 age = 12345
 print(type(age))
@@ -216,3 +217,7 @@ a
 b = [6, 7]
 a.extend(b)
 a
+=======
+while True:
+    print('Hello')
+>>>>>>> 697d05eb114b5e340e2d265869cd0d58c0baf66f
