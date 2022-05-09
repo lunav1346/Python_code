@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-a = input() # 숫자 입력받기.
-b = None
-alist = list()
-
-for i in range(len(a)):
-    alist.append(a[i])
-    alist.sort()
-
-print(b)
-=======
-<<<<<<< HEAD
 #4
 age = 12345
 print(type(age))
@@ -228,8 +216,3 @@ a
 b = [6, 7]
 a.extend(b)
 a
-=======
-while True:
-    print('Hello')
->>>>>>> 697d05eb114b5e340e2d265869cd0d58c0baf66f
->>>>>>> 320eecc761e29050c169a010e338a1433dd34384
