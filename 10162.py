@@ -1,27 +1,22 @@
-import sys
-
-divide = 0 #몫
-nam = 0 #나머지
-
-a = int(sys.stdin.readline())
-fivemin = onemin = tensec = 0
-
-
-while a != 0:
-    if a % 10 > 1:
+def time(second) ->int:
+    if second % 10 != 0:
         print(-1)
-        break
+    else:
+        divide(second)
 
-    elif a // 300 >= 1:
-        a -= 300
-        fivemin += 1
 
-    elif a // 60 >= 1:
-        a -= 60
-        onemin += 1
+def divide(time) -> int:
+    five_min = 0
+    one_min = 0
+    ten_sec = 0
+    while time != 0:
+        if time - 300 >= 0:
+            time -= 300; five_min += 1
+        elif time - 60 >= 0:
+            time -= 60; one_min += 1
+        elif time - 10 >= 0:
+            time -= 10; ten_sec +=1
+    print(f"{five_min} {one_min} {ten_sec}")
 
-    elif a // 10 >= 1:
-        a -= 10
-        tensec += 1
-
-print(fivemin, onemin, tensec)
+a = int(input()) # 시간 입력
+time(a)
